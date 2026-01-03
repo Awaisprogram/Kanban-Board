@@ -1,5 +1,5 @@
 // frontend/src/services/api.ts
-const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:8000';
+const BACKEND_URL = 'https://kanban-board-ls6n.vercel.app';
 
 interface Todo {
   id: number;
