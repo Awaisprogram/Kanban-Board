@@ -12,7 +12,7 @@ export const users = pgTable("user", {
     .$defaultFn(() => crypto.randomUUID()),
   name: text("name"),
   email: text("email").notNull(),
-  emailverified: timestamp("emailverified", { mode: "date" }),
+  emailVerified: timestamp("emailVerified", { mode: "date" }),
   image: text("image"),
   // Add the password column here
   password: text("password"),
@@ -21,12 +21,12 @@ export const users = pgTable("user", {
 export const accounts = pgTable(
   "account",
   {
-    userid: text("userid")
+    userId: text("userId")
       .notNull()
       .references(() => users.id, { onDelete: "cascade" }),
     type: text("type").notNull(),
     provider: text("provider").notNull(),
-    provideraccountid: text("provideraccountid").notNull(),
+    providerAccountId: text("providerAccountId").notNull(),
     refresh_token: text("refresh_token"),
     access_token: text("access_token"),
     expires_at: integer("expires_at"),
@@ -37,14 +37,14 @@ export const accounts = pgTable(
   },
   (account) => ({
     compoundKey: primaryKey({
-      columns: [account.provider, account.provideraccountid],
+      columns: [account.provider, account.providerAccountId],
     }),
   })
 );
 
 export const sessions = pgTable("session", {
   sessionToken: text("sessionToken").primaryKey(),
-  userid: text("userid")
+  userId: text("userId")
     .notNull()
     .references(() => users.id, { onDelete: "cascade" }),
   expires: timestamp("expires", { mode: "date" }).notNull(),
