@@ -7,7 +7,7 @@ import AuthProvider from "@/components/providers/session-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Hackathon Entry 2025",
+  title: "Kanban Board",
   description: "Built with Next.js, Motion, and Lenis.",
 };
 

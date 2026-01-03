@@ -1,8 +1,8 @@
-// Better Auth client-side hook for session management
-import { useAuth as useBetterAuth } from "@/auth";
+// NextAuth client-side hook for session management
+import { useSession, signIn as authSignIn, signOut as authSignOut } from "next-auth/react";
 
 export const useAuth = () => {
-  const { data: session, status, signIn, signOut, update } = useBetterAuth();
+  const { data: session, status } = useSession();
 
   return {
     user: session?.user || null,
@@ -10,8 +10,8 @@ export const useAuth = () => {
     status,
     isLoading: status === "loading",
     isAuthenticated: !!session,
-    signIn,
-    signOut,
-    update,
+    signIn: authSignIn,
+    signOut: authSignOut,
+    update: () => Promise.resolve(), // Placeholder for update functionality
   };
 };
