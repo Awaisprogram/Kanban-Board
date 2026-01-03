@@ -432,15 +432,15 @@ const AddCard = ({ column, setCards, onCreateTodo }: { column: ColumnType; setCa
             className="w-full rounded-lg border border-indigo-500/30 bg-indigo-500/10 p-3 text-sm text-slate-50 placeholder-indigo-300/50 focus:outline-0 focus:ring-1 focus:ring-indigo-500"
           />
           <div className="mt-1.5 flex items-center justify-end gap-1.5">
-            <button onClick={() => setAdding(false)} className="px-3 py-1.5 text-xs text-slate-400 hover:text-slate-50">Cancel</button>
-            <button type="submit" className="flex items-center gap-1.5 rounded bg-indigo-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-indigo-500">
+            <button onClick={() => setAdding(false)} className="px-3 py-1.5 text-xs text-slate-400 hover:text-slate-50 cursor-pointer">Cancel</button>
+            <button type="submit" className="flex items-center gap-1.5 rounded bg-indigo-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-indigo-500 cursor-pointer">
               <span>Add</span>
               <Plus size={14} />
             </button>
           </div>
         </motion.form>
       ) : (
-        <motion.button layout onClick={() => setAdding(true)} className="flex w-full items-center gap-1.5 px-3 py-1.5 text-xs text-slate-500 hover:text-slate-300">
+        <motion.button layout onClick={() => setAdding(true)} className="flex w-full items-center gap-1.5 px-3 py-1.5 text-xs text-slate-500 hover:text-slate-300 cursor-pointer">
           <span>Add card</span>
           <Plus size={14} />
         </motion.button>

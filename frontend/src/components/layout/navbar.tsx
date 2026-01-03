@@ -140,7 +140,7 @@ export default function Navbar() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="flex h-9 w-9 items-center justify-center rounded-lg border border-violet-500/20 bg-violet-500/5 text-violet-400 md:hidden"
+              className="flex h-9 w-9 items-center justify-center rounded-lg border border-violet-500/20 bg-violet-500/5 text-violet-400 md:hidden cursor-pointer"
             >
               {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>

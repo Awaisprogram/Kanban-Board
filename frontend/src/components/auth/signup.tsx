@@ -413,7 +413,7 @@ const SignUpCard = () => {
                           <button
                             type="button"
                             onClick={() => setShowPw((v) => !v)}
-                            className="absolute right-2 top-1/2 -translate-y-1/2 p-1 text-slate-400 hover:text-slate-200 transition-colors"
+                            className="absolute right-2 top-1/2 -translate-y-1/2 p-1 text-slate-400 hover:text-slate-200 transition-colors cursor-pointer"
                             tabIndex={-1}
                           >
                             {showPw ? <EyeOff size={18} /> : <Eye size={18} />}
@@ -442,7 +442,7 @@ const SignUpCard = () => {
                           <button
                             type="button"
                             onClick={() => setShowPw2((v) => !v)}
-                            className="absolute right-2 top-1/2 -translate-y-1/2 p-1 text-slate-400 hover:text-slate-200 transition-colors"
+                            className="absolute right-2 top-1/2 -translate-y-1/2 p-1 text-slate-400 hover:text-slate-200 transition-colors cursor-pointer"
                             tabIndex={-1}
                           >
                             {showPw2 ? <EyeOff size={18} /> : <Eye size={18} />}
