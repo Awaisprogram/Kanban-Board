@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![TaskGenie Banner](./docs/banner.png)
+![TaskGenie Banner](/frontend/public/logo.png)
 
 **Organize chaos. Achieve clarity.**
 
