@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
-WEB_URL = os.getenv("WEB_URL", "http://localhost:3000")  # Default to localhost:3000 if not set
+WEB_URL = os.getenv("WEB_URL", "http://localhost:3000","https://kanban-board-tasks.vercel.app")  # Default to localhost:3000 if not set
 
 engine = create_engine(DATABASE_URL)
 
